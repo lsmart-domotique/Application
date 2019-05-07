@@ -9,7 +9,7 @@ import HomeScreen from './screens/HomeScreen';
 import AuthOnboardingScreen from './screens/Authentication/AuthOnboardingScreen';
 import SplashScreen from './screens/SplashScreen';
 import Drawer from './components/Drawer';
-import StyleguideScreen from './screens/StyleguideScreen';
+import StyleguideScreen from './screens/Styleguide/StyleguideScreen';
 
 export const routes = [
   {
@@ -23,7 +23,7 @@ export const routes = [
 ];
 
 const AuthenticatedStack = createDrawerNavigator({
-  Home: { screen: StyleguideScreen },
+  Home: { screen: HomeScreen },
   Styleguide: { screen: StyleguideScreen },
 }, {
   initialRouteName: 'Home',

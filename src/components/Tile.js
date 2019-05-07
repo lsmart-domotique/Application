@@ -72,7 +72,7 @@ Tile.propTypes = {
 
 Tile.defaultProps = {
   link: '',
-  image: '',
+  image: null,
   name: '',
   connectionsNumber: 0,
   hasError: false,
