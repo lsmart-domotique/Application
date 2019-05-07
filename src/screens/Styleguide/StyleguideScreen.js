@@ -31,7 +31,9 @@ const StyleguideScreen = ({ navigation }) => (
 
       <Button transparent><Text>Transparent</Text></Button>
       <Button style={[utils.marginBottom10]} rounded><Text>Rounded</Text></Button>
+      <Button style={[utils.marginBottom10]} small><Text>Small</Text></Button>
       <Button style={[utils.marginBottom10]}><Text>Default</Text></Button>
+      <Button style={[utils.marginBottom10]} large><Text>Large</Text></Button>
       <Button style={[utils.marginBottom10]} danger><Text>Danger</Text></Button>
       <Button style={[utils.marginBottom10]} success><Text>Succes</Text></Button>
       <Button style={[utils.marginBottom10]} iconRight><Text>Primary with icon</Text><Icon name="add" /></Button>
