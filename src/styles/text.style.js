@@ -16,10 +16,10 @@ export const text = StyleSheet.create({
     color: '#FFFFFF',
   },
   small: {
-    fontSize: 13,
+    fontSize: 14,
   },
   error: {
-    fontSize: 13,
+    fontSize: 14,
     color: platform.brandDanger,
     marginBottom: 10,
   },
@@ -34,6 +34,9 @@ export const text = StyleSheet.create({
   },
   fontSize15: {
     fontSize: 15,
+  },
+  fontSize16: {
+    fontSize: 16,
   },
   fontSize10: {
     fontSize: 10,

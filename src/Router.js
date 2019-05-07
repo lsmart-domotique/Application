@@ -9,16 +9,22 @@ import HomeScreen from './screens/HomeScreen';
 import AuthOnboardingScreen from './screens/Authentication/AuthOnboardingScreen';
 import SplashScreen from './screens/SplashScreen';
 import Drawer from './components/Drawer';
+import StyleguideScreen from './screens/Styleguide/StyleguideScreen';
 
 export const routes = [
   {
     name: 'Accueil',
     route: 'Home',
   },
+  {
+    name: 'Styleguide',
+    route: 'Styleguide',
+  },
 ];
 
 const AuthenticatedStack = createDrawerNavigator({
   Home: { screen: HomeScreen },
+  Styleguide: { screen: StyleguideScreen },
 }, {
   initialRouteName: 'Home',
   headerMode: 'none',
