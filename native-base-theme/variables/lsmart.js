@@ -25,7 +25,7 @@ export default {
   androidRipple: true,
   androidRippleColor: 'rgba(256, 256, 256, 0.3)',
   androidRippleColorDark: 'rgba(0, 0, 0, 0.15)',
-  btnUppercaseAndroidText: true,
+  btnUppercaseAndroidText: false,
 
   // Badge
   badgeBg: '#ED1727',
@@ -104,7 +104,7 @@ export default {
   checkboxTickColor: '#fff',
 
   // Color
-  brandPrimary: '#4EB4F9',
+  brandPrimary: '#00BBFF',
   brandInfo: '#62B1F6',
   brandSuccess: '#5cb85c',
   brandDanger: '#d9534f',
@@ -148,7 +148,7 @@ export default {
 
   // Header
   toolbarBtnColor: platform === 'ios' ? '#007aff' : '#fff',
-  toolbarDefaultBg: '#4EB4F9',
+  toolbarDefaultBg: '#00BBFF',
   toolbarHeight: platform === 'ios' ? 64 : 56,
   toolbarSearchIconSize: platform === 'ios' ? 20 : 23,
   toolbarInputColor: platform === 'ios' ? '#CECDD2' : '#fff',
