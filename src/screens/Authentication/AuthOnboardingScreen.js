@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'native-base';
 import { withNavigation } from 'react-navigation';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 class AuthOnboardingScreen extends Component {
   state = {
