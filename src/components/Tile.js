@@ -16,7 +16,7 @@ const Tile = ({
   hasError,
   isAddTile,
 }) => (
-  <Card style={[flex.flex1]}>
+  <Card style={[flex.flex1, flex.center]}>
     <CardItem
       button
       onPress={() => alert(`Go to ${link}`)}
@@ -44,7 +44,7 @@ const Tile = ({
             </View>
           </View>
         </View>
-        { name ? <Text style={[text.bold, text.center]}>{ name }</Text> : null }
+        { name ? <Text style={[text.bold, text.center, text.fontSize16]}>{ name }</Text> : null }
         {!isAddTile ? (
           <Text style={[tile.text, text.small]}>
             {

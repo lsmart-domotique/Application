@@ -2,9 +2,6 @@ import { StyleSheet } from 'react-native';
 import platform from "../../native-base-theme/variables/platform";
 
 export const tile = StyleSheet.create({
-  card: {
-    backgroundColor: 'red',
-  },
   body: {
     alignItems: 'center',
     display: 'flex',
