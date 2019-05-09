@@ -23,4 +23,22 @@ export default {
       isAddTile: true,
     },
   ],
+  toggles: [
+    {
+      name: 'Title only',
+    }, {
+      icon: require('../../img/room.png'),
+      name: 'With icon',
+    }, {
+      icon: require('../../img/room.png'),
+      name: 'With icon and toggle',
+      hasToggle: true,
+      isOn: true,
+    }, {
+      name: 'Volet 1',
+      subtitle: 'With subtitle and toggle',
+      hasToggle: true,
+      isOn: false,
+    },
+  ],
 };

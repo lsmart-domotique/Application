@@ -104,13 +104,14 @@ export default {
   checkboxTickColor: '#fff',
 
   // Color
-  brandPrimary: '#00BBFF',
+  brandPrimary: '#00A7FF',
   brandInfo: '#62B1F6',
   brandSuccess: '#5cb85c',
   brandDanger: '#d9534f',
   brandWarning: '#f0ad4e',
   brandDark: '#000',
   brandLight: '#f4f4f4',
+  brandDisabled: '#9c9c9c',
 
   // Container
   containerBgColor: '#FAFAFA',
@@ -148,7 +149,7 @@ export default {
 
   // Header
   toolbarBtnColor: platform === 'ios' ? '#007aff' : '#fff',
-  toolbarDefaultBg: '#00BBFF',
+  toolbarDefaultBg: '#00A7FF',
   toolbarHeight: platform === 'ios' ? 64 : 56,
   toolbarSearchIconSize: platform === 'ios' ? 20 : 23,
   toolbarInputColor: platform === 'ios' ? '#CECDD2' : '#fff',

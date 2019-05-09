@@ -1,7 +1,10 @@
 import { StyleSheet } from 'react-native';
-import platform from '../../native-base-theme/variables/platform';
+import platform from '../../native-base-theme/variables/lsmart';
 
 export const text = StyleSheet.create({
+  uppercase: {
+    textTransform: 'uppercase',
+  },
   bold: {
     fontWeight: 'bold',
   },

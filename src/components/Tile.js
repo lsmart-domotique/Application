@@ -63,7 +63,7 @@ export default Tile;
 
 Tile.propTypes = {
   link: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.any,
   name: PropTypes.string,
   connectionsNumber: PropTypes.number,
   hasError: PropTypes.bool,
