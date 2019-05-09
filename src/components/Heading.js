@@ -14,6 +14,7 @@ const Heading = ({
   subtitle,
   hasToggle,
   isOn,
+  onToggle,
 }) => (
   <Grid style={[utils.marginBottom10]}>
     <Row style={[flex.verticalAlignCenter]}>
@@ -29,7 +30,7 @@ const Heading = ({
         ) : null
       }
       <Col style={[flex.flex1]}>
-        <Text style={[text.bold, text.uppercase]}>{ name }</Text>
+        <Text style={[text.bold, text.uppercase]}>{name}</Text>
         {
           subtitle && subtitle.length > 0 ? (
             <Text style={[text.small]}>{subtitle}</Text>
@@ -39,7 +40,10 @@ const Heading = ({
       {
         hasToggle ? (
           <Col style={[flex.alignRight, flex.flex0]}>
-            <Toggle isOn={isOn} />
+            <Toggle
+              isOn={isOn}
+              onToggle={onToggle}
+            />
           </Col>
         ) : null
       }
@@ -50,11 +54,12 @@ const Heading = ({
 export default Heading;
 
 Heading.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.any,
   name: PropTypes.string,
   subtitle: PropTypes.string,
   hasToggle: PropTypes.bool,
   isOn: PropTypes.bool,
+  onToggle: PropTypes.func,
 };
 
 Heading.defaultProps = {
@@ -63,4 +68,5 @@ Heading.defaultProps = {
   subtitle: null,
   hasToggle: false,
   isOn: false,
+  onToggle: null,
 };
