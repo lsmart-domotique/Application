@@ -8,6 +8,7 @@ import Tiles from '../../components/Tiles';
 import { layout } from '../../styles/layout.style';
 import { utils } from '../../styles/utils.style';
 import fakeData from './fakeData';
+import Heading from "../../components/Heading";
 
 const StyleguideScreen = ({ navigation }) => (
   <Container>
@@ -24,37 +25,54 @@ const StyleguideScreen = ({ navigation }) => (
     </Header>
     <Content style={[layout.body]}>
 
-      {/* BUTTONS */}
-      <H1>
-        Buttons
-      </H1>
+      {/*/!* BUTTONS *!/*/}
+      {/*<H1>*/}
+      {/*  Buttons*/}
+      {/*</H1>*/}
 
-      <H3 style={[utils.marginTop20, utils.marginBottom10]}>Styles</H3>
-      <Button transparent><Text>Transparent</Text></Button>
-      <Button style={[utils.marginBottom10]} rounded><Text>Rounded</Text></Button>
-      <Button style={[utils.marginBottom10]} block><Text>Block</Text></Button>
+      {/*<H3 style={[utils.marginTop20, utils.marginBottom10]}>Styles</H3>*/}
+      {/*<Button transparent><Text>Transparent</Text></Button>*/}
+      {/*<Button style={[utils.marginBottom10]} rounded><Text>Rounded</Text></Button>*/}
+      {/*<Button style={[utils.marginBottom10]} block><Text>Block</Text></Button>*/}
 
-      <H3 style={[utils.marginTop20, utils.marginBottom10]}>Sizes</H3>
-      <Button style={[utils.marginBottom10]} small><Text>Small</Text></Button>
-      <Button style={[utils.marginBottom10]}><Text>Default</Text></Button>
-      <Button style={[utils.marginBottom10]} large><Text>Large</Text></Button>
+      {/*<H3 style={[utils.marginTop20, utils.marginBottom10]}>Sizes</H3>*/}
+      {/*<Button style={[utils.marginBottom10]} small><Text>Small</Text></Button>*/}
+      {/*<Button style={[utils.marginBottom10]}><Text>Default</Text></Button>*/}
+      {/*<Button style={[utils.marginBottom10]} large><Text>Large</Text></Button>*/}
 
-      <H3 style={[utils.marginTop20, utils.marginBottom10]}>Colors</H3>
-      <Button style={[utils.marginBottom10]} danger><Text>Danger</Text></Button>
-      <Button style={[utils.marginBottom10]} success><Text>Succes</Text></Button>
-      <Button style={[utils.marginBottom10]} bordered><Text>Secondary</Text></Button>
-      <Button style={[utils.marginBottom10]} disabled><Text>Disabled</Text></Button>
+      {/*<H3 style={[utils.marginTop20, utils.marginBottom10]}>Colors</H3>*/}
+      {/*<Button style={[utils.marginBottom10]} danger><Text>Danger</Text></Button>*/}
+      {/*<Button style={[utils.marginBottom10]} success><Text>Succes</Text></Button>*/}
+      {/*<Button style={[utils.marginBottom10]} bordered><Text>Secondary</Text></Button>*/}
+      {/*<Button style={[utils.marginBottom10]} disabled><Text>Disabled</Text></Button>*/}
 
-      <H3 style={[utils.marginTop20, utils.marginBottom10]}>More</H3>
-      <Button style={[utils.marginBottom10]} iconRight><Text>Primary with icon</Text><Icon name="add" /></Button>
-      <Button style={[utils.marginBottom10]} iconLeft><Icon name="add" /><Text>Primary with icon</Text></Button>
-      <Button style={[utils.marginBottom10]} disabled><Spinner color="#fff" style={[utils.paddingHorizontal10]} /></Button>
+      {/*<H3 style={[utils.marginTop20, utils.marginBottom10]}>More</H3>*/}
+      {/*<Button style={[utils.marginBottom10]} iconRight><Text>Primary with icon</Text><Icon name="add" /></Button>*/}
+      {/*<Button style={[utils.marginBottom10]} iconLeft><Icon name="add" /><Text>Primary with icon</Text></Button>*/}
+      {/*<Button style={[utils.marginBottom10]} disabled><Spinner color="#fff" style={[utils.paddingHorizontal10]} /></Button>*/}
 
-      {/* TILES */}
-      <H1 style={[utils.marginTop50]}>
-        Tiles
-      </H1>
-      <Tiles items={fakeData.tiles} />
+      {/*/!* TILES *!/*/}
+      {/*<H1 style={[utils.marginTop50]}>*/}
+      {/*  Tiles*/}
+      {/*</H1>*/}
+      {/*<Tiles items={fakeData.tiles} />*/}
+
+      {/*/!* TOGGLES *!/*/}
+      {/*<H1 style={[utils.marginTop50]}>*/}
+      {/*  Toggles*/}
+      {/*</H1>*/}
+
+      {
+        fakeData.toggles.map(toggle => (
+          <Heading
+            icon={toggle.icon}
+            name={toggle.name}
+            isOn={toggle.isOn}
+          />
+        ))
+      }
+
+
     </Content>
   </Container>
 );

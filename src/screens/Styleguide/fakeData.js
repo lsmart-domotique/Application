@@ -23,4 +23,19 @@ export default {
       isAddTile: true,
     },
   ],
+  toggles: [
+    {
+      icon: require('../../img/room.png'),
+      name: 'Chambre 1',
+      isOn: true,
+    }, {
+      icon: require('../../img/room.png'),
+      name: 'Chambre 1',
+      isOn: false,
+    }, {
+      icon: require('../../img/room.png'),
+      name: 'Chambre 1',
+      isOn: true,
+    },
+  ],
 };
