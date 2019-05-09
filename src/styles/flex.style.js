@@ -1,14 +1,11 @@
 import { StyleSheet } from 'react-native';
 
 export const flex = StyleSheet.create({
+  flex0: {
+    flex: 0,
+  },
   flex1: {
     flex: 1,
-  },
-  flex2: {
-    flex: 2,
-  },
-  flex3: {
-    flex: 3,
   },
   row: {
     flexDirection: 'row',
@@ -19,6 +16,9 @@ export const flex = StyleSheet.create({
   center: {
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  alignRight: {
+    justifyContent: 'flex-end',
   },
   full: {
     flex: 1,

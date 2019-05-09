@@ -5,33 +5,44 @@ import {
 import PropTypes from 'prop-types';
 import { flex } from '../styles/flex.style';
 import { text } from '../styles/text.style';
-import { tile } from '../styles/tile.style';
-import Toggle from "./Toggle";
+import { utils } from '../styles/utils.style';
+import Toggle from './Toggle';
 
 const Heading = ({
   icon,
   name,
+  subtitle,
+  hasToggle,
   isOn,
 }) => (
-  <Grid>
+  <Grid style={[utils.marginBottom10]}>
     <Row style={[flex.verticalAlignCenter]}>
-      <Col style={[flex.flex1]}>
-        {
-          icon ? (
+      {
+        icon ? (
+          <Col style={[flex.flex0, utils.paddingRight20]}>
             <Thumbnail
               square
               small
               source={icon}
             />
+          </Col>
+        ) : null
+      }
+      <Col style={[flex.flex1]}>
+        <Text style={[text.bold, text.uppercase]}>{ name }</Text>
+        {
+          subtitle && subtitle.length > 0 ? (
+            <Text style={[text.small]}>{subtitle}</Text>
           ) : null
         }
       </Col>
-      <Col style={[flex.flex3]}>
-        <Text>{ name }</Text>
-      </Col>
-      <Col style={[flex.flex2]}>
-        <Toggle isOn={isOn} />
-      </Col>
+      {
+        hasToggle ? (
+          <Col style={[flex.alignRight, flex.flex0]}>
+            <Toggle isOn={isOn} />
+          </Col>
+        ) : null
+      }
     </Row>
   </Grid>
 );
@@ -41,11 +52,15 @@ export default Heading;
 Heading.propTypes = {
   icon: PropTypes.string,
   name: PropTypes.string,
+  subtitle: PropTypes.string,
+  hasToggle: PropTypes.bool,
   isOn: PropTypes.bool,
 };
 
 Heading.defaultProps = {
   icon: null,
   name: '',
+  subtitle: null,
+  hasToggle: false,
   isOn: false,
 };

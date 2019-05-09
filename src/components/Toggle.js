@@ -8,9 +8,17 @@ import { toggle } from '../styles/toggle.style';
 
 const Toggle = ({ isOn }) => (
   <View style={[toggle.body, isOn && toggle.active]}>
-    <Text style={[toggle.text, toggle.textRight, isOn && toggle.textRightActive]}>ON</Text>
-    <Icon type="FontAwesome" name="check-circle" style={[toggle.icon, isOn && toggle.iconActive]} />
-    <Text style={[toggle.text, toggle.textLeft, !isOn && toggle.textLeftActive]}>OFF</Text>
+    <Text style={[toggle.text, toggle.textRight, isOn && toggle.textRightActive]}>
+      ON
+    </Text>
+    <Icon
+      type="FontAwesome"
+      name={isOn ? 'check-circle' : 'times-circle'}
+      style={[toggle.icon, isOn && toggle.iconActive]}
+    />
+    <Text style={[toggle.text, toggle.textLeft, !isOn && toggle.textLeftActive]}>
+      OFF
+    </Text>
   </View>
 );
 

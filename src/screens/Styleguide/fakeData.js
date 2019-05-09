@@ -25,17 +25,20 @@ export default {
   ],
   toggles: [
     {
-      icon: require('../../img/room.png'),
-      name: 'Chambre 1',
-      isOn: true,
+      name: 'Title only',
     }, {
       icon: require('../../img/room.png'),
-      name: 'Chambre 1',
+      name: 'With icon',
+    }, {
+      icon: require('../../img/room.png'),
+      name: 'With icon and toggle',
+      hasToggle: true,
+      isOn: true,
+    }, {
+      name: 'Volet 1',
+      subtitle: 'With subtitle and toggle',
+      hasToggle: true,
       isOn: false,
-    }, {
-      icon: require('../../img/room.png'),
-      name: 'Chambre 1',
-      isOn: true,
     },
   ],
 };

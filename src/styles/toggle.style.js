@@ -12,9 +12,9 @@ export const toggle = StyleSheet.create({
   text: {
     position: 'absolute',
     color: '#fff',
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: 'bold',
-    top: 7,
+    top: 8,
   },
   textLeft: {
     left: 12,
@@ -35,10 +35,10 @@ export const toggle = StyleSheet.create({
     fontSize: 19,
     color: '#fff',
     top: 5,
-    right: 6,
+    right: 7,
   },
   iconActive: {
-    left: 6,
+    left: 7,
   },
   active: {
     backgroundColor: platform.brandPrimary,
