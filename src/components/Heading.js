@@ -15,12 +15,13 @@ const Heading = ({
   hasToggle,
   isOn,
   onToggle,
+  style,
 }) => (
-  <Grid style={[utils.marginBottom10]}>
+  <Grid style={ style }>
     <Row style={[flex.verticalAlignCenter]}>
       {
         icon ? (
-          <Col style={[flex.flex0, utils.paddingRight20]}>
+          <Col style={[flex.flex0, utils.paddingRight10]}>
             <Thumbnail
               square
               small
@@ -54,6 +55,7 @@ const Heading = ({
 export default Heading;
 
 Heading.propTypes = {
+  style: PropTypes.any,
   icon: PropTypes.any,
   name: PropTypes.string,
   subtitle: PropTypes.string,
@@ -63,6 +65,7 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
+  style: null,
   icon: null,
   name: '',
   subtitle: null,

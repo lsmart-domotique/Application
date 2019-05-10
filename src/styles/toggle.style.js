@@ -35,7 +35,8 @@ export const toggle = StyleSheet.create({
     fontSize: 19,
     color: '#fff',
     top: 5,
-    right: 7,
+    right: 4,
+    width: 19,
   },
   iconActive: {
     left: 7,

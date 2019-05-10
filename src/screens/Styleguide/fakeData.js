@@ -41,4 +41,10 @@ export default {
       isOn: false,
     },
   ],
+  tabsHeading: {
+    icon: require('../../img/room.png'),
+    name: 'With icon and toggle',
+    hasToggle: true,
+    isOn: true,
+  },
 };
