@@ -217,12 +217,12 @@ export default {
   },
 
   // Segment
-  segmentBackgroundColor: '#3F51B5',
-  segmentActiveBackgroundColor: '#007aff',
+  segmentBackgroundColor: '#00a7FF',
+  segmentActiveBackgroundColor: '#00a7ff',
   segmentTextColor: '#fff',
   segmentActiveTextColor: '#fff',
-  segmentBorderColor: '#007aff',
-  segmentBorderColorMain: '#007aff',
+  segmentBorderColor: '#00a7ff',
+  segmentBorderColorMain: '#00a7ff',
 
   // Spinner
   defaultSpinnerColor: '#45D56E',
@@ -231,9 +231,9 @@ export default {
   // Tab
   tabDefaultBg: '#fff',
   topTabBarTextColor: '#6b6b6b',
-  topTabBarActiveTextColor: '#007aff',
-  topTabBarBorderColor: '#007aff',
-  topTabBarActiveBorderColor: '#007aff',
+  topTabBarActiveTextColor: '#00a7ff',
+  topTabBarBorderColor: '#00a7ff',
+  topTabBarActiveBorderColor: '#00a7ff',
 
   // Tabs
   tabBgColor: '#fff',

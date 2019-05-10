@@ -95,6 +95,7 @@ class StyleguideScreen extends Component {
             {
               fakeData.toggles.map(toggle => (
                 <Heading
+                  style={[utils.marginBottom20]}
                   key={toggle.name}
                   icon={toggle.icon}
                   name={toggle.name}
@@ -113,7 +114,15 @@ class StyleguideScreen extends Component {
 
             <Card>
               <CardItem>
-                <Text>Title</Text>
+                <Heading
+                  style={[utils.marginVertical10]}
+                  icon={fakeData.tabsHeading.icon}
+                  name={fakeData.tabsHeading.name}
+                  subtitle={fakeData.tabsHeading.subtitle}
+                  hasToggle={fakeData.tabsHeading.hasToggle}
+                  isOn={isOn}
+                  onToggle={this.onToggle}
+                />
               </CardItem>
               <Tabs>
                 <Tab

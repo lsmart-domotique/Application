@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import platform from '../../native-base-theme/variables/lsmart';
 
 export const tabs = StyleSheet.create({
   tabs: {
