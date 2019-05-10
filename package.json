@@ -10,6 +10,7 @@
     "ios": "react-native run-ios",
     "update:ios": "cd ios && bundler exec pod install",
     "android:build:release": "./scripts/android-build-prod.sh",
+    "android:generate:certificate": "./scripts/generate-android-key.sh",
     "android:clean": "cd android && ./gradlew clean"
   },
   "dependencies": {
