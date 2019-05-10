@@ -217,26 +217,26 @@ export default {
   },
 
   // Segment
-  segmentBackgroundColor: platform === 'ios' ? '#F8F8F8' : '#3F51B5',
-  segmentActiveBackgroundColor: platform === 'ios' ? '#007aff' : '#fff',
-  segmentTextColor: platform === 'ios' ? '#007aff' : '#fff',
-  segmentActiveTextColor: platform === 'ios' ? '#fff' : '#3F51B5',
-  segmentBorderColor: platform === 'ios' ? '#007aff' : '#fff',
-  segmentBorderColorMain: platform === 'ios' ? '#a7a6ab' : '#3F51B5',
+  segmentBackgroundColor: '#3F51B5',
+  segmentActiveBackgroundColor: '#007aff',
+  segmentTextColor: '#fff',
+  segmentActiveTextColor: '#fff',
+  segmentBorderColor: '#007aff',
+  segmentBorderColorMain: '#007aff',
 
   // Spinner
   defaultSpinnerColor: '#45D56E',
   inverseSpinnerColor: '#1A191B',
 
   // Tab
-  tabDefaultBg: platform === 'ios' ? '#F8F8F8' : '#3F51B5',
-  topTabBarTextColor: platform === 'ios' ? '#6b6b6b' : '#b3c7f9',
-  topTabBarActiveTextColor: platform === 'ios' ? '#007aff' : '#fff',
-  topTabBarBorderColor: platform === 'ios' ? '#a7a6ab' : '#fff',
-  topTabBarActiveBorderColor: platform === 'ios' ? '#007aff' : '#fff',
+  tabDefaultBg: '#fff',
+  topTabBarTextColor: '#6b6b6b',
+  topTabBarActiveTextColor: '#007aff',
+  topTabBarBorderColor: '#007aff',
+  topTabBarActiveBorderColor: '#007aff',
 
   // Tabs
-  tabBgColor: '#F8F8F8',
+  tabBgColor: '#fff',
   tabFontSize: 15,
 
   // Text

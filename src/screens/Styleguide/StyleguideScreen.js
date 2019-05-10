@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import {
-  Container, Header, Content, Button, Icon, Left, Right, Body, Title, H1, H3, Text, Spinner,
+  Container, Header, Content, Button, Icon, Left, Right, Body, Title, H1, H3, Text, Spinner, Card, CardItem, Tabs, Tab,
 } from 'native-base';
 import { withNavigation, DrawerActions } from 'react-navigation';
 import PropTypes from 'prop-types';
 import Tiles from '../../components/Tiles';
 import { layout } from '../../styles/layout.style';
 import { utils } from '../../styles/utils.style';
+import { tabs } from '../../styles/tabs.style';
 import fakeData from './fakeData';
 import Heading from '../../components/Heading';
 
@@ -42,7 +43,7 @@ class StyleguideScreen extends Component {
                 navigation.dispatch(DrawerActions.toggleDrawer());
               }}
             >
-              <Icon name="menu"/>
+              <Icon name="menu" />
             </Button>
           </Left>
           <Body>
@@ -104,6 +105,37 @@ class StyleguideScreen extends Component {
                 />
               ))
             }
+
+            {/* TABS */}
+            <H1 style={[utils.marginTop50, utils.marginBottom30]}>
+              Tabs
+            </H1>
+
+            <Card>
+              <CardItem>
+                <Text>Title</Text>
+              </CardItem>
+              <Tabs>
+                <Tab
+                  textStyle={[tabs.textStyle]}
+                  activeTextStyle={[tabs.textStyle]}
+                  heading="Général"
+                >
+                  <CardItem>
+                    <Text>Tab content 1</Text>
+                  </CardItem>
+                </Tab>
+                <Tab
+                  textStyle={[tabs.textStyle]}
+                  activeTextStyle={[tabs.textStyle]}
+                  heading="Dissocié"
+                >
+                  <CardItem>
+                    <Text>Tab content 2</Text>
+                  </CardItem>
+                </Tab>
+              </Tabs>
+            </Card>
           </View>
         </Content>
       </Container>
