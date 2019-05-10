@@ -13,6 +13,7 @@
     "android:clean": "cd android && ./gradlew clean"
   },
   "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "^1.0.0",
     "firebase": "^5.10.1",
     "native-base": "^2.12.1",
     "prop-types": "^15.7.2",

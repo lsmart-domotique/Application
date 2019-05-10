@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import {
-  Container, Header, Content, Button, Icon, Left, Right, Body, Title, H1, H3, Text, Spinner, Card, CardItem, Tabs, Tab,
+  Container, Header, Content, Button, Icon, Left, Right, Body, Title, H1, H3, Text, Spinner, Card, CardItem, Tabs, Tab, Grid, Row, Col,
 } from 'native-base';
 import { withNavigation, DrawerActions } from 'react-navigation';
 import PropTypes from 'prop-types';
-import Tiles from '../../components/Tiles';
+import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import { layout } from '../../styles/layout.style';
 import { utils } from '../../styles/utils.style';
 import { tabs } from '../../styles/tabs.style';
-import fakeData from './fakeData';
+import { text } from '../../styles/text.style';
 import Heading from '../../components/Heading';
+import SliderCustomMarker from '../../components/SliderCustomMarker';
+import Tiles from '../../components/Tiles';
+import fakeData from './fakeData';
+import platform from '../../../native-base-theme/variables/lsmart';
+import {slider} from "../../styles/slider.style";
 
 class StyleguideScreen extends Component {
   state = {
     isOn: false,
+    sliderValue: [45],
   };
 
   onToggle = () => {
     const { isOn } = this.state;
     this.setState({
       isOn: !isOn,
+    });
+  };
+
+  // USE ON MULTISLIDER
+  sliderValueChange = (values) => {
+    this.setState({
+      sliderValue: values,
     });
   };
 
@@ -31,6 +44,7 @@ class StyleguideScreen extends Component {
 
     const {
       isOn,
+      sliderValue,
     } = this.state;
 
     return (
@@ -77,9 +91,9 @@ class StyleguideScreen extends Component {
             <Button style={[utils.marginBottom10]} disabled><Text>Disabled</Text></Button>
 
             <H3 style={[utils.marginTop20, utils.marginBottom10]}>More</H3>
-            <Button style={[utils.marginBottom10]} iconRight><Text>Primary with icon</Text><Icon name="add"/></Button>
-            <Button style={[utils.marginBottom10]} iconLeft><Icon name="add"/><Text>Primary with icon</Text></Button>
-            <Button style={[utils.marginBottom10]} disabled><Spinner color="#fff" style={[utils.paddingHorizontal10]}/></Button>
+            <Button style={[utils.marginBottom10]} iconRight><Text>Primary with icon</Text><Icon name="add" /></Button>
+            <Button style={[utils.marginBottom10]} iconLeft><Icon name="add" /><Text>Primary with icon</Text></Button>
+            <Button style={[utils.marginBottom10]} disabled><Spinner color="#fff" style={[utils.paddingHorizontal10]} /></Button>
 
             {/* TILES */}
             <H1 style={[utils.marginTop50]}>
@@ -145,6 +159,41 @@ class StyleguideScreen extends Component {
                 </Tab>
               </Tabs>
             </Card>
+
+            {/* SLIDER */}
+            <H1 style={[utils.marginTop50, utils.marginBottom30]}>
+              Slider
+            </H1>
+
+            <Grid>
+              <Row>
+                <Col>
+                  <Text>
+                    Intensité
+                  </Text>
+                </Col>
+                <Col>
+                  <Text style={[text.right]}>
+                    {sliderValue[0]}%
+                  </Text>
+                </Col>
+              </Row>
+            </Grid>
+
+            <MultiSlider
+              values={[
+                sliderValue[0],
+              ]}
+              onValuesChange={this.sliderValueChange}
+              min={0}
+              max={100}
+              sliderLength={300}
+              step={1}
+              customMarker={SliderCustomMarker}
+              containerStyle={[slider.containerStyle]}
+              selectedStyle={[slider.selectedStyle]}
+              trackStyle={[slider.trackStyle]}
+            />
           </View>
         </Content>
       </Container>
