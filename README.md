@@ -38,6 +38,7 @@ You don't need to add firebase .json files, unless you need a firebase Android /
 
 ### First time you build on this computer ?
 You need to generate a release key by running the script `yarn android:generate:certificate`
+Use `Bearstudio$76` for the password
 Answer to asked information, and fill password
 Then run `yarn android:build:release`
 
