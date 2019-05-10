@@ -15,6 +15,9 @@ export const text = StyleSheet.create({
   center: {
     textAlign: 'center',
   },
+  right: {
+    textAlign: 'right',
+  },
   textWhite: {
     color: '#FFFFFF',
   },
