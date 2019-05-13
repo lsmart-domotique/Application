@@ -1,4 +1,4 @@
-.# Quick start
+# Quick start
 
 ### First time your start ?
 To follow those steps, you need to have an Android SDK setted up and Xcode setted up with the last version of the command lines tools
